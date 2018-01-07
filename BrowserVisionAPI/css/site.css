@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url("/fonts/SegoeUI-Light.woff") format('woff');
+}
+body {
+    font-family: "Segoe UI Light";
+    margin: 20px;
+    font: 1.5em/1.2 "Segoe UI Light";
+    text-align: center;
+}
+    body > * {
+        font-family: "Segoe UI Light";
+    }
+figure {
+	display: inline-block;
+	margin: 10px;
+	vertical-align: top;
+}
+
+figcaption {
+	text-align: left;
+	font-weight: bold;
+}
+
+video, canvas {
+	width: 480px;
+	height: 360px;
+	background-color: #999;
+}
+
+canvas {
+	image-rendering: pixelated;
+}
+
+ul {
+    list-style-type: none;
+}

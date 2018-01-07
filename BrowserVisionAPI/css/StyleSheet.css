@@ -1,0 +1,105 @@
+﻿html {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Sergoe UI Light';
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0px;
+}
+    body > * {
+        font-family: 'Sergoe UI Light';
+    }
+video {
+    margin: auto;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+}
+
+button {
+    width: 80%;
+    margin: auto;
+    height: 60px;
+}
+
+#myCanvas {
+    display: block;
+    width: 100% height: auto;
+}
+
+#upload {
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+#preview {
+    display: block;
+    margin: auto;
+    width: 60%
+}
+
+    #preview img {
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+        box-shadow: 5px 5px 25px #000000;
+        max-width: 500px;
+    }
+
+#toplogo {
+    margin: auto
+}
+
+    #toplogo img {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+    }
+
+#status {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 10px;
+    text-align: center;
+}
+
+#results {
+    line-height: 2;
+    margin: 20px auto auto;
+    display: block;
+    width: 42%;
+    text-align: left;
+    font-family: 'Sergoe UI Light', sans-serif;
+}
+
+    #results a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+        #results a:visited {
+            text-decoration: none;
+            color: black;
+        }
+#row {}
+#row .viewport {
+    width: 33%;
+    height: auto;
+    display: inline-block;
+    border: solid 1px red;
+}
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url("fonts/SegoeUI-Light.woff") format('woff');
+}
