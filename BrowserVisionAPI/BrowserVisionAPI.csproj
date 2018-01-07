@@ -145,13 +145,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\optima.eot" />
-    <Content Include="fonts\SegoeUI-Light.woff">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="fonts\SegoeUI-Light.woff" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomVisionDemo - Web Deploy.pubxml" />
-    <Content Include="README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
