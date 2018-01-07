@@ -49,7 +49,7 @@ function predictImage(obj) {
         if (this.readyState === 4 && this.status === 200) {
             // OK
             result = JSON.parse(this.responseText);
-            console.log(results);
+            console.log(result);
 
                 displaypredictionResults(result, results);
                 triggered = false;
@@ -60,18 +60,19 @@ function predictImage(obj) {
             results.innerHTML = "Rate limit exeeded!!";
         }
     };
+
         xhttp.open("POST", "/api/prediction", true);
-        xhttp.send(obj);    
+        xhttp.send(obj);
+    
 }
 function displaypredictionResults(result, dest) {
     var html = "";
-    console.log(result);
     for (var i = 0; i < result.Predictions.length; i++) {
         if (result.Predictions[i].Probability > 0.05/* && (results.Predictions[i].Tag.indexOf("PID") === 0) */) {
             html = html + result.Predictions[i].Tag + "&nbsp;" + Math.floor(result.Predictions[i].Probability * 100).toString() + "%<br/>";
         }
     }
-    dest.innerHTML = html;
+    results.innerHTML = html;
 }
 
 function trainImage(obj) {
