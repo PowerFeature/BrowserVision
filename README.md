@@ -1,5 +1,5 @@
 # BrowserVision
-### BrowserVision is a project that makes a webclient for some of Microsoft's vision services.
+### BrowserVision is a webclient for some of Microsoft's vision services.
 
 It uses the lonekorean's diff-cam-engine for motion detection. To only submit images upon movement. https://github.com/lonekorean/diff-cam-engine
 Thanks to David Walsh browser camera article https://davidwalsh.name/browser-camera
