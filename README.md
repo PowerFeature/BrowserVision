@@ -5,7 +5,7 @@ It uses the lonekorean's diff-cam-engine for motion detection. To only submit im
 Thanks to David Walsh browser camera article https://davidwalsh.name/browser-camera
 
 ### Requirements:
-- Azuresubscription
+- Azure subscription
 - Customvision Account for customvision training and prediction. Get it at http://customvision.ai
 - Microsoft Face API for face recognition Get is on at portal.azure.com
 
