@@ -68,7 +68,7 @@ function predictImage(obj) {
 function displaypredictionResults(result, dest) {
     var html = "";
     for (var i = 0; i < result.Predictions.length; i++) {
-        if (result.Predictions[i].Probability > 0.05/* && (results.Predictions[i].Tag.indexOf("PID") === 0) */) {
+        if (result.Predictions[i].Probability > 0.05) {
             html = html + result.Predictions[i].Tag + "&nbsp;" + Math.floor(result.Predictions[i].Probability * 100).toString() + "%<br/>";
         }
     }
