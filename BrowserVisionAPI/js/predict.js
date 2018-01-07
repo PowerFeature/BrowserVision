@@ -60,21 +60,15 @@ function predictImage(obj) {
             results.innerHTML = "Rate limit exeeded!!";
         }
     };
-
         xhttp.open("POST", "/api/prediction", true);
-        xhttp.send(obj);
-        console.log("Exception : " + err.toString());
-        // Rate Limit Exeeded wait 1000ms
-        setTimeout(function () { triggered = false; }, 1000);
-        dest.innerHTML = "Rate limit exeeded!! waiting";
-    
+        xhttp.send(obj);    
 }
-function displaypredictionResults(results, dest) {
+function displaypredictionResults(result, dest) {
     var html = "";
-    console.log(results);
-    for (var i = 0; i < results.Predictions.length; i++) {
-        if (results.Predictions[i].Probability > 0.05/* && (results.Predictions[i].Tag.indexOf("PID") === 0) */) {
-            html = html + results.Predictions[i].Tag + "&nbsp;" + Math.floor(results.Predictions[i].Probability * 100).toString() + "%<br/>";
+    console.log(result);
+    for (var i = 0; i < result.Predictions.length; i++) {
+        if (result.Predictions[i].Probability > 0.05/* && (results.Predictions[i].Tag.indexOf("PID") === 0) */) {
+            html = html + result.Predictions[i].Tag + "&nbsp;" + Math.floor(result.Predictions[i].Probability * 100).toString() + "%<br/>";
         }
     }
     dest.innerHTML = html;
