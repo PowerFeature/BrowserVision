@@ -29,7 +29,7 @@ Alternativly add the following to the web.config :
   </appSettings>
 ```
 ## Known issues:
-- The backend has some warm-up time. This leads to the first image processed is slow.
+- The backend has some warm-up time. This leads to the first image processed is slow, sometimes a browserrefresh is needed. 
 - Automated training is not in the customvision implementation yet. After training you must go to customvision.ai and train manually. Remember to set the newest iteration to default. Otherwise your new objects will not be recognized. 
 - The client side is very thin on the custom vision side. The backend has a lot of redundant calls for identifying projects and downloading tags. 
 
