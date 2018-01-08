@@ -38,4 +38,4 @@ Alternativly add the following to the web.config :
 ### Browser issues:
 - Edge (Browser) somethimes turns the image 90 degrees. This is a browser issue
 - Only Chrome allows to select from external cameras
-- Safari on iPhone has known issues. Safari iPad should be ok. 
+- Safari on iPhone has known issues. User controls has been added https://github.com/webrtc/samples/issues/929 . Safari iPad should be ok. 
