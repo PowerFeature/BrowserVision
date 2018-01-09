@@ -29,6 +29,7 @@ namespace BrowserVisionAPI.Controllers
                 var projectID = await CVhelper.SetActiveProjectAsync(ConfigurationManager.AppSettings["CustomVisionProjectName"]);
                 var result = await CVhelper.PredictImageAsync(bytes);
                 response.Content = new StringContent(result);
+
                 return response;
             }
             catch (Exception ex)

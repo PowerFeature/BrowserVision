@@ -28,7 +28,8 @@ function capture(payload) {
             //Wait 0.5 seconds before doing capture
             //setTimeout(function () { predictImage(captureCanvas.toDataURL("image/jpeg", 0.9) )}, 500);
             predictImage(captureCanvas.toDataURL("image/jpeg", 0.7));
-            }
+        }
+
     }
 
 }
