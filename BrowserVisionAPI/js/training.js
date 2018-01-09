@@ -5,6 +5,8 @@ var captureCanvas = document.getElementById('captureCanvas');
 var captureCanvasContext = captureCanvas.getContext('2d');
 var tagsInput = document.getElementById("tagsInput");
 var record = document.getElementById("record");
+var threshold = document.getElementById("threshold")
+
 
 function initSuccess() {
     DiffCamEngine.start();
@@ -24,7 +26,7 @@ function capture(payload) {
     score.textContent = payload.score;
 
     if (connections < macConnections && tagsInput.value.indexOf(";") > 0 && record.checked === true) {
-        if (payload.score > 30) {
+        if (payload.score > threshold.value) {
             triggered = true;
             connections++;
             captureCanvasContext.drawImage(video, 0, 0, 1280, 720);

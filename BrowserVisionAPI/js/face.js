@@ -4,6 +4,10 @@ var score = document.getElementById('score');
 var captureCanvas = document.getElementById('captureCanvas');
 var captureCanvasContext = captureCanvas.getContext('2d');
 var results = document.getElementById('results');
+var record = document.getElementById("record");
+
+
+
 function initSuccess() {
     DiffCamEngine.start();
     console.log("ready");
@@ -20,7 +24,7 @@ var triggered = true;
 function capture(payload) {
     score.textContent = payload.score;
     
-    if (!triggered) {
+    if (!triggered && record.checked === true) {
         if (payload.score > 30) {
             triggered = true;
             results.innerHTML = "";

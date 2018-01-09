@@ -54,10 +54,11 @@ function predictImage(obj) {
                 displaypredictionResults(result, results);
                 triggered = false;
          }
-        else if (this.status === 429) {
+        else /*if (this.status === 429)*/ {
             // Rate Limit Exeeded wait 1000ms
             setTimeout(function () { triggered = false; }, 1000);
-            results.innerHTML = "Rate limit exeeded!!";
+            console.log("Rate limit exceeded");
+            //results.innerHTML = "Rate limit exeeded!!";
         }
     };
 
@@ -67,12 +68,20 @@ function predictImage(obj) {
 }
 function displaypredictionResults(result, dest) {
     var html = "";
+    if (result.Predictions) {
+
+    
     for (var i = 0; i < result.Predictions.length; i++) {
-        if (result.Predictions[i].Probability > 0.05) {
+        if (result.Predictions[i].Probability > 0.25) {
             html = html + result.Predictions[i].Tag + "&nbsp;" + Math.floor(result.Predictions[i].Probability * 100).toString() + "%<br/>";
         }
     }
     results.innerHTML = html;
+    }
+    else {
+        setTimeout(function () { triggered = false; }, 1000);
+        console.log("Undefined response");
+    }
 }
 
 function trainImage(obj) {

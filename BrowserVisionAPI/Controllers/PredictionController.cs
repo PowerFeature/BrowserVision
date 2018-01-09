@@ -26,7 +26,7 @@ namespace BrowserVisionAPI.Controllers
                     throw new HttpRequestException("Image is " + bytes.Count().ToString() + " bytes - must be larger than 1000 bytes");
                 }
                 var CVhelper = new CustomVision.CustomVisionHelper(ConfigurationManager.AppSettings["Training-Key"], ConfigurationManager.AppSettings["Prediction-Key"]);
-                var projectID = await CVhelper.SetActiveProjectAsync("legoTest");
+                var projectID = await CVhelper.SetActiveProjectAsync(ConfigurationManager.AppSettings["CustomVisionProjectName"]);
                 var result = await CVhelper.PredictImageAsync(bytes);
                 response.Content = new StringContent(result);
                 return response;
